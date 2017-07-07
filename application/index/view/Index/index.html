@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    {include file='index/header' title='Thinkphp 5.0 留言板'}
+    <body>
+        <div class="container" style="margin-top:20px;">
+            {include file='index/contact'}
+                <table class="table">
+                    <tr>
+                        <td>编号</td>
+                        <td>标题</td>
+                        <td>发布日期</td>
+                        <td>发布人</td>
+                        <td>操作</td>
+                    </tr>
+                    
+                    {volist name='message' id='fu'}
+                        <tr>
+                            <td>{$fu.note_id}</td>
+                            <td><a href="#">{$fu.note_title}</a></td>
+                            <td>{$fu.create_time}</td>
+                            <td>{$fu.user_name}</td>
+                            <td><a href="#">删除</a></td>
+                        </tr>
+                        
+                    {/volist}
+                    
+                </table>
+            </div>
+    </body>
+</html>
