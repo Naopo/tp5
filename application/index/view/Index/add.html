@@ -14,13 +14,29 @@ and open the template in the editor.
   <div class="form-group">
     <label class="col-sm-2 control-label">标题</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" name="note_title" placeholder="请输入标题">
+      <input class="form-control" required="required"
+                           pattern="^\S{4,}$"
+                           title="请输入4位及以上的字符"
+                           type="text"
+                           name="note_title"
+                           autocomplete="off"
+                           autofocus="autofocus"
+                           class="login-input username"
+                           placeholder="请输入标题"/>
     </div>
   </div>
   <div class="form-group">
     <label  class="col-sm-2 control-label">内容</label>
     <div class="col-sm-10">
-        <textarea class="form-control" name="note_content" rows="3" placeholder="请输入内容"></textarea>
+        <input class="form-control" required="required"
+                           pattern="^\S{4,}$"
+                           title="请输入4位及以上的字符"
+                           type="text"
+                           name="note_content"
+                           autocomplete="off"
+                           autofocus="autofocus"
+                           class="login-input username"
+                           placeholder="请输入内容"/>
     </div>
   </div>
   

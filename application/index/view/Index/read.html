@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+{include file='index/header' title='发布留言－Thinkphp 5.0 留言板'}
+
+<body>
+<div class="container" style="margin-top:20px;">
+{include file='index/contact'}
+	<div class="panel panel-default">
+  <div class="panel-heading">{$Message.note_title}</div>
+  <div class="panel-body">
+  	{$Message.note_content}
+    <hr/>
+   <h6> {$Message.user_name} 发表于 : {$Message.create_time}</h6>
+    </div>
+  </div>
+    <div class="text-center">
+        <a href="../../index">返回</a>
+     </div>
+</div>
+
+</body>
+</html>

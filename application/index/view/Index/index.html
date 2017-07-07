@@ -21,10 +21,10 @@ and open the template in the editor.
                     {volist name='message' id='fu'}
                         <tr>
                             <td>{$fu.note_id}</td>
-                            <td><a href="#">{$fu.note_title}</a></td>
+                            <td><a href="read/id/{$fu.note_id}">{$fu.note_title}</a></td>
                             <td>{$fu.create_time}</td>
                             <td>{$fu.user_name}</td>
-                            <td><a href="#">删除</a></td>
+                            <td><a href="delete/id/{$fu.note_id}">删除</a></td>
                         </tr>
                         
                     {/volist}

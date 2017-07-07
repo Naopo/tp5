@@ -51,5 +51,27 @@ class Index extends Controller{
         Session::clear();
         return $this->success('退出成功','php/tp5/public/index/login/login');
     }
+    public function delete($id){
+        $confirm=Message::get($id);
+        if($confirm){
+            $confirm->delete();
+            $this->success('删除成功','index');
+        }else{
+            $this->error('没有要删除的记录');
+        }
+    }
+    public function read($id){
+        if(Session::has('name')){
+            $name=Session::get('name');
+        }else{
+            $this->error('请先登陆','login/login');
+        }
+        
+        $Message=Message::get($id);
+        $this->assign('Message',$Message);
+        $this->assign('name',$name);
+        $html=$this->fetch();
+        return $html;
+    }
 }
 
